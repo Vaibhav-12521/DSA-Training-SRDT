@@ -1,6 +1,6 @@
 ### 🧩 Code Overview
 
-You’re creating a simple **singly linked list** of 3 nodes:
+Creating a simple **singly linked list** of 3 nodes:
 
 ```
 n1 -> n2 -> n3 -> NULL
@@ -102,4 +102,5 @@ free(n3);
 This releases the allocated memory back to the system.
 
 ---
+
 
