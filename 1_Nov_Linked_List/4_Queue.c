@@ -1,4 +1,3 @@
-//doubly linked list
 #include<stdio.h>
 #define maxsize 5
 int queue[maxsize];
@@ -15,11 +14,8 @@ void insert(int element){
     else{
         rear = rear + 1;
     }
-
     queue[rear] = element;
-
     printf("Inserted Successfully");
-
 }
 
 void delete(){
@@ -43,13 +39,8 @@ void display(){
 int main(){
     insert(10);
     insert(20);
-
-
     display();
-
     delete();
-
     display();
-
     return 0;
 }
