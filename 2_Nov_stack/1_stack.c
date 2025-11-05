@@ -1,7 +1,5 @@
 #include<stdio.h>
-
 #define MAXSIZE 5
-
 int stack[MAXSIZE];
 
 int top = -1;
@@ -14,7 +12,6 @@ void push(int element){
         stack[top] = element;
         printf("Pushed %d to stack\n", element);
     }
-
 }
 
 void pop(){
@@ -37,3 +34,4 @@ int main(){
     pop();
     return 0;
 }
+
