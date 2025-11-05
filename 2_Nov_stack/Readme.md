@@ -117,8 +117,28 @@ Pushed 10 to stack
 
 ---
 
-✅ **Summary**
+### Dry Run
 
-* The element `10` was successfully pushed.
-* No overflow (stack not full).
-* Final stack top = 0, holding one element.
+| Step | Operation  | Condition Checked   | Action Taken               | `top` After | Stack Content (`[0] [1] [2] [3] [4]`) | Output                |
+| ---- | ---------- | ------------------- | -------------------------- | ----------- | ------------------------------------- | --------------------- |
+| 1    | `push(10)` | `top == 4 → false`  | `top = 0`, `stack[0] = 10` | 0           | [10, _, _, _, _]                      | `Pushed 10 to stack`  |
+| 2    | `push(20)` | `top == 4 → false`  | `top = 1`, `stack[1] = 20` | 1           | [10, 20, _, _, _]                     | `Pushed 20 to stack`  |
+| 3    | `push(30)` | `top == 4 → false`  | `top = 2`, `stack[2] = 30` | 2           | [10, 20, 30, _, _]                    | `Pushed 30 to stack`  |
+| 4    | `pop()`    | `top == -1 → false` | `popele = 30`, `top = 1`   | 1           | [10, 20, 30, _, _]                    | `poped Element is 30` |
+| 5    | `pop()`    | `top == -1 → false` | `popele = 20`, `top = 0`   | 0           | [10, 20, 30, _, _]                    | `poped Element is 20` |
+| 6    | `pop()`    | `top == -1 → false` | `popele = 10`, `top = -1`  | -1          | [10, 20, 30, _, _]                    | `poped Element is 10` |
+
+---
+
+### 🧾 **Final Output**
+
+```
+Pushed 10 to stack
+Pushed 20 to stack
+Pushed 30 to stack
+poped Element is 30
+poped Element is 20
+poped Element is 10
+```
+
+
